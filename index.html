@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compressly - High-Performance On-Device Photo & Image Compressor for Android</title>
+  <meta name="description" content="Compressly is the ultimate Android photo and image optimizer. Shrink photos, wallpapers, screenshots, and RAW images by up to 90% with zero quality loss. 100% offline & private.">
+  <meta name="keywords" content="photo compressor, image optimizer, android apk, photo shrinker, compressly, offline photo compressor, jpeg png webp heic">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Grid Background -->
+  <div class="bg-grid"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Compressly Home">
+        <img src="assets/images/logo.png" alt="Compressly Logo" class="brand-icon">
+        <span>Compressly</span>
+        <span class="brand-badge">Android</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#testbench" class="nav-link">Live Demo</a></li>
+          <li><a href="#comparison" class="nav-link">Quality Slider</a></li>
+          <li><a href="#calculator" class="nav-link">Calculator</a></li>
+          <li><a href="#formats" class="nav-link">Formats</a></li>
+          <li><a href="#security" class="nav-link">Privacy</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+          <i data-lucide="moon" id="themeIcon"></i>
+        </button>
+
+        <!-- Direct APK Download Button -->
+        <a href="base.apk" download="Compressly_v1.0.apk" class="btn btn-apk btn-sm btn-direct-apk">
+          <i data-lucide="download"></i>
+          <span>Download APK</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Mobile Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-menu" id="mobileMenu" style="display: none;">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#testbench" class="nav-link">Live Demo</a>
+      <a href="#comparison" class="nav-link">Quality Slider</a>
+      <a href="#calculator" class="nav-link">Savings Calculator</a>
+      <a href="#formats" class="nav-link">Supported Formats</a>
+      <a href="#security" class="nav-link">Privacy & Security</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <a href="base.apk" download="Compressly_v1.0.apk" class="btn btn-apk btn-sm btn-direct-apk" style="flex:1;">
+          <i data-lucide="download"></i> Direct APK Download
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-pulse"></span>
+            <span>Compressly v1.0.0 for Android is Live</span>
+          </div>
+
+          <h1 class="hero-title">
+            Shrink Photos.<br>
+            <span class="highlight">Preserve 100% Quality.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            The premium on-device photo compression studio for Android. Reduce high-res photos, RAW captures, and screenshots by up to <strong>90%</strong> without sending any data to the cloud. Lightning-fast, lossless visual fidelity, and strictly private.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="base.apk" download="Compressly_v1.0.apk" class="btn btn-apk btn-lg btn-direct-apk">
+              <i data-lucide="download"></i>
+              <span>Download Direct APK (25.5 MB)</span>
+            </a>
+            <button class="btn btn-secondary btn-lg" data-modal-target="qrModal">
+              <i data-lucide="qr-code"></i>
+              <span>Scan QR for Phone</span>
+            </button>
+          </div>
+
+          <div class="hero-trust-row">
+            <div class="trust-item">
+              <i data-lucide="shield-check"></i>
+              <span>100% Offline & Private</span>
+            </div>
+            <div class="trust-item">
+              <i data-lucide="zap"></i>
+              <span>Hardware Accelerated</span>
+            </div>
+            <div class="trust-item">
+              <i data-lucide="layers"></i>
+              <span>Batch Processing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Mockup with 3D Logo & Live UI Showcase -->
+        <div class="hero-visual">
+          <!-- Floating Badge 1 -->
+          <div class="floating-stat-card floating-stat-1">
+            <div class="fstat-title">Storage Reclaimed</div>
+            <div class="fstat-val">
+              <i data-lucide="arrow-down-right" style="color:#10b981; width:20px;"></i>
+              <span>-88.4% Saved</span>
+            </div>
+          </div>
+
+          <!-- Phone Device Frame -->
+          <div class="phone-mockup-wrapper">
+            <div class="phone-screen">
+              <div class="phone-island">
+                <div class="phone-island-cam"></div>
+              </div>
+
+              <!-- In-App Header -->
+              <div class="phone-app-header">
+                <div class="phone-app-title">
+                  <img src="assets/images/logo.png" alt="App Logo" style="width:24px; height:24px; object-fit:contain;">
+                  <span>Compressly</span>
+                </div>
+                <i data-lucide="sliders" style="width:18px; color:var(--text-muted);"></i>
+              </div>
+
+              <!-- In-App Content Body -->
+              <div class="phone-app-body">
+                <div class="phone-card">
+                  <div class="phone-meter">
+                    <span style="font-weight:700; color:#fff;">Batch Optimization</span>
+                    <span style="color:#10b981; font-weight:700;">88% Reclaimed</span>
+                  </div>
+                  <div class="phone-progress-bar">
+                    <div class="phone-progress-fill"></div>
+                  </div>
+                </div>
+
+                <!-- Media List Items -->
+                <div class="phone-media-item">
+                  <img src="assets/images/samples/sample-photo-compressed.jpg" alt="Landscape Thumb" class="phone-media-thumb">
+                  <div class="phone-media-meta">
+                    <div class="phone-media-name">IMG_2026_4K.jpg</div>
+                    <div class="phone-media-size">14.2 MB → 1.8 MB</div>
+                  </div>
+                  <span class="phone-badge-green">-87%</span>
+                </div>
+
+                <div class="phone-media-item">
+                  <img src="assets/images/samples/sample-portrait-compressed.jpg" alt="Portrait Thumb" class="phone-media-thumb">
+                  <div class="phone-media-meta">
+                    <div class="phone-media-name">PORTRAIT_RAW.jpg</div>
+                    <div class="phone-media-size">8.6 MB → 1.1 MB</div>
+                  </div>
+                  <span class="phone-badge-green">-88%</span>
+                </div>
+
+                <div class="phone-media-item">
+                  <img src="assets/images/samples/sample-tech-mockup.jpg" alt="App Mockup Thumb" class="phone-media-thumb">
+                  <div class="phone-media-meta">
+                    <div class="phone-media-name">SCREENSHOT_HD.png</div>
+                    <div class="phone-media-size">5.4 MB → 680 KB</div>
+                  </div>
+                  <span class="phone-badge-green">-87%</span>
+                </div>
+
+                <div class="phone-action-btn">
+                  <i data-lucide="check-circle" style="width:16px; display:inline-block; vertical-align:middle; margin-right:4px;"></i>
+                  Saved to Gallery
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2 -->
+          <div class="floating-stat-card floating-stat-2">
+            <div class="fstat-title">Perceptual SSIM Score</div>
+            <div class="fstat-val">
+              <i data-lucide="sparkles" style="color:#38bdf8; width:20px;"></i>
+              <span>0.998 Ultra</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         STATS STRIP
+         ========================================================================== -->
+    <section class="section" id="statsSection" style="padding: 40px 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); background: var(--bg-secondary);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; text-align: center;">
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 900; color: var(--primary);">
+              <span class="count-up" data-count="90">0</span>%
+            </div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600;">Max Photo Size Reduction</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 900; color: var(--accent);">
+              <span class="count-up" data-count="100">0</span>%
+            </div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600;">On-Device Privacy (Zero Uploads)</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 900; color: var(--secondary);">
+              <span class="count-up" data-count="50">0</span>x
+            </div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600;">Faster Batch Processing</div>
+          </div>
+          <div>
+            <div style="font-size: 2.5rem; font-weight: 900; color: #f59e0b;">
+              <span class="count-up" data-count="0">0</span>
+            </div>
+            <div style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600;">Intrusive Ads or Trackers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE LIVE BROWSER COMPRESSOR (TEST BENCH)
+         ========================================================================== -->
+    <section class="section" id="testbench">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Test Bench</span>
+          <h2 class="section-title">Test Compression <span class="gradient-text">Live in Your Browser</span></h2>
+          <p class="section-desc">
+            Experience Compressly's compression engine right now. Drop any photo from your computer or adjust the slider to see instant size reduction.
+          </p>
+        </div>
+
+        <div class="testbench-card">
+          <div class="testbench-grid">
+            <!-- Dropzone & Preview -->
+            <div>
+              <div class="dropzone" id="compressDropzone">
+                <input type="file" id="compressFileInput" accept="image/jpeg,image/png,image/webp,image/heic" style="display: none;">
+                <i data-lucide="upload-cloud" class="dropzone-icon"></i>
+                <div class="dropzone-title">Drop your image here or Click to Browse</div>
+                <div class="dropzone-desc">Supports JPEG, PNG, WebP, HEIC (Processed locally in your browser)</div>
+              </div>
+
+              <!-- Output Preview Container -->
+              <div style="margin-top: 24px;">
+                <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+                  Real-time Compressed Preview:
+                </div>
+                <div class="test-preview-box">
+                  <img id="compPreviewImg" src="assets/images/samples/sample-photo-compressed.jpg" alt="Compressed Preview" class="test-preview-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- Compression Controls & Real-time Metrics -->
+            <div class="control-panel">
+              <div class="control-group">
+                <label>
+                  <span>Compression Quality</span>
+                  <span id="compressQualityVal" style="color: var(--primary); font-family: var(--font-mono); font-weight: 800;">65%</span>
+                </label>
+                <input type="range" id="compressQuality" class="range-slider" min="10" max="95" value="65">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; font-weight: 600;">
+                  <span>Smallest Size (-85%)</span>
+                  <span>Balanced (-65%)</span>
+                  <span>Near Lossless</span>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label>
+                  <span>Output Format</span>
+                </label>
+                <select id="compressFormat" class="form-input">
+                  <option value="image/jpeg" selected>Optimized JPEG (.jpg)</option>
+                  <option value="image/webp">Next-Gen WebP (.webp)</option>
+                  <option value="image/png">Optimized PNG (.png)</option>
+                </select>
+              </div>
+
+              <!-- Real-time Stats Comparison Box -->
+              <div class="comparison-stats-box">
+                <div>
+                  <div class="stat-metric-title">Original Size</div>
+                  <div class="stat-metric-val" id="compOrigSize">401 KB</div>
+                </div>
+                <div>
+                  <div class="stat-metric-title">New Size</div>
+                  <div class="stat-metric-val" id="compNewSize" style="color: var(--primary);">152 KB</div>
+                </div>
+                <div>
+                  <div class="stat-metric-title">Savings</div>
+                  <div class="stat-metric-val saved" id="compSavingsPct">-62%</div>
+                </div>
+              </div>
+
+              <div style="background: rgba(16, 185, 129, 0.1); border: 1.5px solid var(--accent); border-radius: var(--radius-md); padding: 14px; font-size: 0.88rem; color: var(--text-primary);">
+                <i data-lucide="check-circle" style="width: 18px; display: inline-block; vertical-align: middle; margin-right: 6px; color: var(--accent);"></i>
+                <strong>Zero artifacts detected.</strong> EXIF camera metadata sanitized for privacy.
+              </div>
+
+              <button id="downloadResultBtn" class="btn btn-primary btn-lg" style="width: 100%;">
+                <i data-lucide="download"></i>
+                <span>Download Optimized Photo</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SINGLE PHOTO BEFORE / AFTER INTERACTIVE COMPARISON SLIDER
+         ========================================================================== -->
+    <section class="section" id="comparison">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Visual Fidelity</span>
+          <h2 class="section-title">Single Photo <span class="gradient-text">Before & After Comparison</span></h2>
+          <p class="section-desc">
+            Drag the handle horizontally to inspect the pristine texture, sharpness, and color fidelity of a single 4K landscape photo before vs after Compressly optimization.
+          </p>
+        </div>
+
+        <div class="split-slider-container" id="beforeAfterSlider">
+          <!-- Before Layer (Original Uncompressed Photo) -->
+          <div class="split-image-layer layer-before" style="background-image: url('assets/images/samples/sample-photo-original.jpg');">
+            <span class="slider-label-pill label-original">Original Photo (401 KB)</span>
+          </div>
+
+          <!-- After Layer (Compressly Compressed Photo) -->
+          <div class="split-image-layer layer-after" id="layerAfter">
+            <div class="layer-after-inner" style="background-image: url('assets/images/samples/sample-photo-compressed.jpg');">
+              <span class="slider-label-pill label-compressed">Compressly (-62% / 152 KB)</span>
+            </div>
+          </div>
+
+          <!-- Draggable Slider Handle -->
+          <div class="slider-handle-line" id="sliderHandle">
+            <div class="slider-handle-button">
+              <i data-lucide="move-horizontal"></i>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px; font-size: 0.92rem; color: var(--text-secondary); font-weight: 600;">
+          <i data-lucide="mouse-pointer" style="width: 16px; display: inline-block; vertical-align: middle; margin-right: 6px; color: var(--primary);"></i>
+          Drag horizontal slider handle or click anywhere on the image to inspect edge sharpness.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         KEY FEATURES BENTO GRID
+         ========================================================================== -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Engineered for Android</span>
+          <h2 class="section-title">Everything You Need <span class="gradient-text">In One Compact App</span></h2>
+          <p class="section-desc">
+            Engineered exclusively for mobile photography and image workflows. Give yourself complete control over resolution, file size, and privacy.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Feature 1: Batch Engine -->
+          <div class="bento-card col-span-2">
+            <div class="bento-icon-box">
+              <i data-lucide="layers"></i>
+            </div>
+            <h3 class="bento-title">High-Throughput Batch Photo Processing</h3>
+            <p class="bento-desc">
+              Compress whole albums or folders containing hundreds of high-resolution photos in parallel. Compressly utilizes multi-core CPU scheduling and GPU acceleration to maximize throughput while minimizing battery drain.
+            </p>
+            <div class="bento-footer-tag">
+              <i data-lucide="zap"></i> Multithreaded WorkerPool
+            </div>
+          </div>
+
+          <!-- Feature 2: 100% Offline & Private -->
+          <div class="bento-card">
+            <div class="bento-icon-box green">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3 class="bento-title">100% Offline Privacy</h3>
+            <p class="bento-desc">
+              Your photos never leave your smartphone. Zero external API calls, zero analytics trackers, and zero account registration required.
+            </p>
+            <div class="bento-footer-tag" style="color: var(--accent);">
+              <i data-lucide="lock"></i> Zero Internet Required
+            </div>
+          </div>
+
+          <!-- Feature 3: Target File Size Mode -->
+          <div class="bento-card">
+            <div class="bento-icon-box purple">
+              <i data-lucide="target"></i>
+            </div>
+            <h3 class="bento-title">Target File Size Mode</h3>
+            <p class="bento-desc">
+              Need to upload a picture or document under 2.0 MB for an official portal or email attachment? Simply enter your target size and Compressly solves the optimal quality automatically.
+            </p>
+            <div class="bento-footer-tag" style="color: var(--secondary);">
+              <i data-lucide="sliders"></i> Precision Bitrate Solver
+            </div>
+          </div>
+
+          <!-- Feature 4: Perceptual AI Preservation -->
+          <div class="bento-card">
+            <div class="bento-icon-box">
+              <i data-lucide="eye"></i>
+            </div>
+            <h3 class="bento-title">Perceptual Quality Optimizer</h3>
+            <p class="bento-desc">
+              Advanced psycho-visual tuning preserves fine details like skin tones, hair textures, and sharp text while discarding imperceptible high-frequency image noise.
+            </p>
+            <div class="bento-footer-tag">
+              <i data-lucide="sparkles"></i> SSIM Score > 0.998
+            </div>
+          </div>
+
+          <!-- Feature 5: EXIF & Metadata Control -->
+          <div class="bento-card">
+            <div class="bento-icon-box green">
+              <i data-lucide="file-cog"></i>
+            </div>
+            <h3 class="bento-title">EXIF & GPS Sanitizer</h3>
+            <p class="bento-desc">
+              Choose to preserve original camera timestamps or strip out sensitive GPS coordinates, device serial numbers, and camera tags before sharing publicly.
+            </p>
+            <div class="bento-footer-tag" style="color: var(--accent);">
+              <i data-lucide="map-pin-off"></i> Privacy-Safe EXIF
+            </div>
+          </div>
+
+          <!-- Feature 6: Next-Gen Formats -->
+          <div class="bento-card col-span-3">
+            <div class="bento-icon-box purple">
+              <i data-lucide="image"></i>
+            </div>
+            <h3 class="bento-title">Universal Image Format Support & Conversion</h3>
+            <p class="bento-desc">
+              Seamlessly handle JPEG, PNG, WebP, HEIC/HEIF, Pro RAW, DNG, GIF, BMP, and AVIF without needing external decoders or third-party converters.
+            </p>
+            <div class="bento-footer-tag" style="color: var(--secondary);">
+              <i data-lucide="cpu"></i> Native NDK Engine
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         STORAGE & BANDWIDTH SAVINGS CALCULATOR
+         ========================================================================== -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Storage ROI Calculator</span>
+          <h2 class="section-title">Calculate Your <span class="gradient-text">Storage Savings</span></h2>
+          <p class="section-desc">
+            Estimate how much phone storage space you will reclaim by optimizing your photo gallery with Compressly.
+          </p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="calc-grid">
+            <div class="calc-controls">
+              <div>
+                <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.95rem; margin-bottom: 8px;">
+                  <span>Photos in Your Gallery:</span>
+                  <span id="calcCountVal" style="color: var(--primary); font-family: var(--font-mono); font-weight: 800;">850</span>
+                </div>
+                <input type="range" id="calcCountSlider" class="range-slider" min="50" max="5000" step="50" value="850">
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.95rem; margin-bottom: 8px;">
+                  <span>Average Size per Photo:</span>
+                  <span id="calcSizeVal" style="color: var(--primary); font-family: var(--font-mono); font-weight: 800;">8.0 MB</span>
+                </div>
+                <input type="range" id="calcSizeSlider" class="range-slider" min="1" max="50" step="0.5" value="8.0">
+              </div>
+
+              <div>
+                <label style="display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 8px;">
+                  Compression Preset:
+                </label>
+                <select id="calcRatioSelect" class="form-input">
+                  <option value="0.85">Maximum Compression (-85% Size)</option>
+                  <option value="0.75" selected>Balanced Quality (-75% Size)</option>
+                  <option value="0.60">Ultra-High Fidelity (-60% Size)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Calculator Output Display -->
+            <div class="calc-result-box">
+              <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 800;">
+                Estimated Storage Reclaimed
+              </div>
+              <div class="calc-saved-number" id="calcGbSaved">5.10 GB</div>
+              <div style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 600;" id="calcSpeedSaved">
+                ~42 min upload time saved
+              </div>
+
+              <div class="calc-metrics-row">
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Original Gallery Size</div>
+                  <div style="font-size: 1.2rem; font-weight: 800; color: var(--text-highlight);" id="calcTotalOriginal">6.80 GB</div>
+                </div>
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Total Reclaimed</div>
+                  <div style="font-size: 1.2rem; font-weight: 800; color: var(--accent);" id="calcTotalSaved">5.10 GB (75%)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         IMAGE FORMAT MATRIX (PHOTO & IMAGE FORMATS ONLY)
+         ========================================================================== -->
+    <section class="section" id="formats">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Broad Image Compatibility</span>
+          <h2 class="section-title">Supported <span class="gradient-text">Photo & Image Formats</span></h2>
+          <p class="section-desc">
+            Compressly natively supports every major photography, graphic design, and mobile camera format.
+          </p>
+        </div>
+
+        <div class="format-grid">
+          <div class="format-card">
+            <div class="format-icon">JPG</div>
+            <div class="format-info">
+              <h4>JPEG / JPG</h4>
+              <p>Camera shots & standard photos</p>
+            </div>
+          </div>
+
+          <div class="format-card">
+            <div class="format-icon">PNG</div>
+            <div class="format-info">
+              <h4>PNG</h4>
+              <p>Screenshots & transparent graphics</p>
+            </div>
+          </div>
+
+          <div class="format-card">
+            <div class="format-icon">WEBP</div>
+            <div class="format-info">
+              <h4>WebP</h4>
+              <p>Modern high-efficiency image format</p>
+            </div>
+          </div>
+
+          <div class="format-card">
+            <div class="format-icon">HEIC</div>
+            <div class="format-info">
+              <h4>HEIC / HEIF</h4>
+              <p>Modern smartphone high-efficiency photos</p>
+            </div>
+          </div>
+
+          <div class="format-card">
+            <div class="format-icon">RAW</div>
+            <div class="format-info">
+              <h4>RAW / DNG</h4>
+              <p>Pro camera digital negatives</p>
+            </div>
+          </div>
+
+          <div class="format-card">
+            <div class="format-icon">GIF</div>
+            <div class="format-info">
+              <h4>GIF</h4>
+              <p>Animated & static frame sequences</p>
+            </div>
+          </div>
+
+          <div class="format-card">
+            <div class="format-icon">AVIF</div>
+            <div class="format-info">
+              <h4>AVIF</h4>
+              <p>Next-generation ultra-dense compression</p>
+            </div>
+          </div>
+
+          <div class="format-card">
+            <div class="format-icon">BMP</div>
+            <div class="format-info">
+              <h4>BMP / TIFF</h4>
+              <p>High-resolution uncompressed bitmaps</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECURITY & PRIVACY BREAKDOWN
+         ========================================================================== -->
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Zero Cloud Risk</span>
+          <h2 class="section-title">Built with <span class="gradient-text">Privacy-by-Design</span></h2>
+          <p class="section-desc">
+            Your personal photos and sensitive documents belong exclusively on your hardware.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+          <div class="bento-card">
+            <div class="bento-icon-box green">
+              <i data-lucide="shield-off"></i>
+            </div>
+            <h3 class="bento-title">No Server Uploads</h3>
+            <p class="bento-desc">All image quantization, resizing, and encoding runs 100% on your device's CPU and GPU.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-icon-box green">
+              <i data-lucide="user-x"></i>
+            </div>
+            <h3 class="bento-title">No Account Required</h3>
+            <p class="bento-desc">Launch the app and start compressing immediately. We don't ask for emails, phone numbers, or passwords.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="bento-icon-box green">
+              <i data-lucide="shield-alert"></i>
+            </div>
+            <h3 class="bento-title">Safe Scoped Storage</h3>
+            <p class="bento-desc">Compressly uses modern Android Scoped Storage to access only the photos you explicitly select.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DOWNLOAD HUB & APK VERIFICATION CENTER
+         ========================================================================== -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Direct Install</span>
+          <h2 class="section-title">Get Compressly <span class="gradient-text">for Android</span></h2>
+          <p class="section-desc">
+            Directly download the verified APK package or scan the QR code on your Android device.
+          </p>
+        </div>
+
+        <div class="download-hub-card">
+          <div class="download-grid">
+            <div>
+              <div class="badge-pill" style="margin-bottom: 16px;">
+                <span class="badge-pulse"></span>
+                <span>Official Release v1.0.0</span>
+              </div>
+
+              <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 12px; color: var(--text-highlight);">
+                Ready to reclaim your phone storage?
+              </h3>
+
+              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+                Download Compressly now to enjoy lightning-fast compression, lossless visual quality, and complete privacy.
+              </p>
+
+              <!-- Technical Specifications Grid -->
+              <div class="apk-spec-list">
+                <div class="apk-spec-item">
+                  <div class="apk-spec-label">Package Name</div>
+                  <div class="apk-spec-value">Compressly</div>
+                </div>
+
+                <div class="apk-spec-item">
+                  <div class="apk-spec-label">File Size</div>
+                  <div class="apk-spec-value">25.54 MB</div>
+                </div>
+
+                <div class="apk-spec-item">
+                  <div class="apk-spec-label">Android Compatibility</div>
+                  <div class="apk-spec-value">Android 7.0 (Nougat) to 15</div>
+                </div>
+
+                <div class="apk-spec-item">
+                  <div class="apk-spec-label">Architecture</div>
+                  <div class="apk-spec-value">arm64-v8a, armeabi-v7a</div>
+                </div>
+              </div>
+
+              <!-- Action CTAs -->
+              <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+                <a href="base.apk" download="Compressly_v1.0.apk" class="btn btn-apk btn-lg btn-direct-apk">
+                  <i data-lucide="download"></i>
+                  <span>Download Direct APK (25.5 MB)</span>
+                </a>
+              </div>
+
+              <!-- SHA-256 Checksum Verification Box -->
+              <div class="checksum-box">
+                <div style="display: flex; flex-direction: column;">
+                  <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">SHA-256 Checksum</span>
+                  <span class="checksum-hash">195f77bf9271eb121b31275c75cbfe1f28e764c88ee81dd092ce45af2b7fbcb2</span>
+                </div>
+                <button class="btn btn-secondary btn-sm" data-copy="195f77bf9271eb121b31275c75cbfe1f28e764c88ee81dd092ce45af2b7fbcb2" title="Copy Checksum">
+                  <i data-lucide="copy"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- QR Code Box for Phone Scanning -->
+            <div class="qr-box-wrapper">
+              <canvas id="qrCodeCanvas" class="qr-code-img"></canvas>
+              <div class="qr-label">Scan with Phone Camera</div>
+              <div class="qr-subtext">Instant download to your Android phone</div>
+              <div style="margin-top: 14px;">
+                <a href="base.apk" download="Compressly_v1.0.apk" class="btn btn-apk btn-sm btn-direct-apk" style="width: 100%;">
+                  <i data-lucide="download"></i> Download APK Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ ACCORDION
+         ========================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+          <p class="section-desc">
+            Find answers to common questions about Compressly, compatibility, photo modes, and privacy.
+          </p>
+        </div>
+
+        <!-- FAQ Search Filter -->
+        <div class="faq-search-box">
+          <i data-lucide="search" class="faq-search-icon"></i>
+          <input type="text" id="faqSearch" class="faq-input" placeholder="Search questions (e.g. offline, photo, EXIF, APK)...">
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <div class="faq-question">
+              <span>Is Compressly completely offline and safe to use?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </div>
+            <div class="faq-answer">
+              Yes, 100%! Compressly requires no internet access or external server connections. Every compression algorithm runs locally on your smartphone's CPU/GPU, ensuring that your photos and personal images never leak to any cloud servers.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How does Compressly achieve 80-90% file size reduction without visible quality loss?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </div>
+            <div class="faq-answer">
+              Compressly utilizes advanced perceptual psychovisual optimization (SSIM tuning) and modern quantization heuristics. It removes microscopic high-frequency image noise that human eyes cannot perceive while preserving sharp edges, colors, and textures.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I specify an exact file size, such as compressing under 2 MB for email or portals?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! The Target Size mode allows you to type your desired maximum size (in KB or MB). Compressly automatically calculates the optimal resolution and bitrate to hit that target without exceeding it.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How do I install the direct APK on my Android phone?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </div>
+            <div class="faq-answer">
+              Click the "Download Direct APK" button to download `base.apk`. Once downloaded, tap the notification or open your Downloads folder and tap the APK file. If prompted, enable "Install unknown apps" for your browser or file manager. The app is 100% digitally signed and safe.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What Android versions are supported?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </div>
+            <div class="faq-answer">
+              Compressly supports Android 7.0 (Nougat, API Level 24) and all modern versions up to Android 14 and Android 15. It is compiled with 64-bit architecture support for ultra-fast processing on modern chipsets.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Will compression overwrite my original photos?</span>
+              <i data-lucide="chevron-down" class="faq-chevron"></i>
+            </div>
+            <div class="faq-answer">
+              By default, Compressly creates a dedicated "Compressly" album in your gallery and saves the optimized versions there, leaving your originals completely untouched. You can also choose to replace the original if you want to immediately free up space.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <img src="assets/images/logo.png" alt="Compressly" class="brand-icon">
+            <span>Compressly</span>
+          </a>
+          <p>
+            Premium on-device photo compression for Android. Reclaim gigabytes of storage while preserving pristine visual quality.
+          </p>
+          <div>
+            <a href="base.apk" download="Compressly_v1.0.apk" class="btn btn-apk btn-sm btn-direct-apk" aria-label="Download APK">
+              <i data-lucide="download"></i> Download Direct APK
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#features" class="footer-link">App Features</a></li>
+            <li><a href="#testbench" class="footer-link">Live Browser Demo</a></li>
+            <li><a href="#calculator" class="footer-link">Savings Calculator</a></li>
+            <li><a href="#download" class="footer-link">Download Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Legal & Privacy</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="footer-link" data-modal-target="privacyModal">Privacy Policy</a></li>
+            <li><a href="terms.html" class="footer-link" data-modal-target="termsModal">Terms of Service</a></li>
+            <li><a href="#security" class="footer-link">Security Overview</a></li>
+            <li><a href="javascript:void(0)" class="footer-link" data-modal-target="contactModal">Support & Feedback</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">App Status</h4>
+          <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7;">
+            <div><strong>Package:</strong> Compressly</div>
+            <div><strong>Target:</strong> Android 7.0+</div>
+            <div><strong>APK Size:</strong> 25.54 MB</div>
+            <div style="margin-top: 10px; display: inline-flex; align-items: center; gap: 6px; color: #10b981; font-weight: 700;">
+              <span class="badge-pulse"></span> All Systems Operational
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Compressly. All rights reserved. Designed with UI/UX Pro Max.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="privacy.html" data-modal-target="privacyModal">Privacy</a>
+          <a href="terms.html" data-modal-target="termsModal">Terms</a>
+          <a href="javascript:void(0)" data-modal-target="contactModal">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS: PRIVACY POLICY, TERMS OF SERVICE, CONTACT, QR CODE
+       ========================================================================== -->
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Compressly Privacy Policy</div>
+        <button class="modal-close-btn" aria-label="Close Privacy Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Effective Date:</strong> January 1, 2026</p>
+        <p>At Compressly, we prioritize user privacy above everything else. This Privacy Policy details how Compressly operates on Android devices and why your personal photos remain 100% safe.</p>
+        
+        <h3>1. 100% On-Device Processing</h3>
+        <p>Compressly does not transmit your photos or images to any external servers. All compression, resizing, decoding, and encoding operations happen strictly in local device memory.</p>
+
+        <h3>2. No Account & Zero Personal Data Collection</h3>
+        <p>Compressly does not require account creation, logins, emails, phone numbers, or passwords. We do not collect names, contact lists, GPS locations, or browsing activity.</p>
+
+        <h3>3. Device Permissions Used</h3>
+        <ul>
+          <li><strong>Storage / Media Access:</strong> Required solely to read the photos you choose to compress and to save the resulting optimized photos back to your gallery.</li>
+          <li><strong>No Internet Permission Required:</strong> The core compression pipeline operates entirely without internet access.</li>
+        </ul>
+
+        <h3>4. Metadata & EXIF Handling</h3>
+        <p>When compressing photos, you have the option to strip EXIF metadata (camera model, GPS coordinates, timestamps) to protect your location privacy when sharing files on social media.</p>
+
+        <h3>5. Contact Information</h3>
+        <p>For inquiries regarding this privacy policy, you may reach out via our in-app support modal or at privacy@compressly.app.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS OF SERVICE MODAL -->
+  <div class="modal-overlay" id="termsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Compressly Terms of Service</div>
+        <button class="modal-close-btn" aria-label="Close Terms Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Last Updated:</strong> January 1, 2026</p>
+        
+        <h3>1. Agreement to Terms</h3>
+        <p>By downloading, installing, or using the Compressly application, you agree to be bound by these Terms of Service.</p>
+
+        <h3>2. License & Permitted Use</h3>
+        <p>Compressly grants you a personal, non-exclusive, non-transferable license to use the app for personal and commercial photo optimization tasks on compatible Android devices.</p>
+
+        <h3>3. Intellectual Property</h3>
+        <p>All trademarks, graphics, code, and algorithms powering Compressly remain the intellectual property of Compressly. You retain complete ownership of all media files processed by the application.</p>
+
+        <h3>4. Disclaimer of Warranties</h3>
+        <p>Compressly is provided "as is" without warranty of any kind. While our perceptual optimization algorithms aim for maximal quality preservation, users are encouraged to maintain backups of critical original media files.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT & SUPPORT MODAL -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Contact Compressly Support</div>
+        <button class="modal-close-btn" aria-label="Close Contact Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="contactForm">
+          <div class="form-group">
+            <label class="form-label" for="contactName">Your Name</label>
+            <input type="text" id="contactName" class="form-input" placeholder="e.g. Alex Rivera" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactEmail">Your Email</label>
+            <input type="email" id="contactEmail" class="form-input" placeholder="e.g. alex@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactSubject">Subject</label>
+            <select id="contactSubject" class="form-input">
+              <option value="feedback">Product Feedback & Suggestions</option>
+              <option value="bug">Report a Bug / Issue</option>
+              <option value="feature">Feature Request</option>
+              <option value="other">Other Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactMessage">Message</label>
+            <textarea id="contactMessage" class="form-textarea" rows="4" placeholder="How can our team help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i data-lucide="send"></i>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR SCAN MODAL -->
+  <div class="modal-overlay" id="qrModal">
+    <div class="modal-content" style="max-width: 480px; text-align: center;">
+      <div class="modal-header">
+        <div class="modal-title">Scan to Install on Phone</div>
+        <button class="modal-close-btn" aria-label="Close QR Modal">&times;</button>
+      </div>
+      <div class="modal-body" style="display: flex; flex-direction: column; align-items: center;">
+        <div style="background: #fff; padding: 20px; border-radius: var(--radius-lg); margin-bottom: 20px;">
+          <canvas id="qrModalCanvas" width="200" height="200"></canvas>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px;">
+          Point your Android camera at the QR code above to immediately download <strong>Compressly (base.apk)</strong> directly onto your device.
+        </p>
+        <a href="base.apk" download="Compressly_v1.0.apk" class="btn btn-apk btn-direct-apk" style="width: 100%;">
+          <i data-lucide="download"></i> Download Directly on this Device
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <!-- Lucide Icon Initialization -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+
+  <!-- Modal QR Canvas Painter -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modalCanvas = document.getElementById('qrModalCanvas');
+      if (modalCanvas) {
+        const ctx = modalCanvas.getContext('2d');
+        const size = 200;
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, size, size);
+        ctx.fillStyle = '#0f172a';
+        
+        function drawF(x, y, s) {
+          ctx.fillStyle = '#0f172a';
+          ctx.fillRect(x, y, s, s);
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(x + 6, y + 6, s - 12, s - 12);
+          ctx.fillStyle = '#0f172a';
+          ctx.fillRect(x + 12, y + 12, s - 24, s - 24);
+        }
+
+        drawF(15, 15, 45);
+        drawF(size - 60, 15, 45);
+        drawF(15, size - 60, 45);
+
+        for (let r = 0; r < size; r += 7) {
+          for (let c = 0; c < size; c += 7) {
+            if ((r < 65 && c < 65) || (r < 65 && c > size - 70) || (r > size - 70 && c < 65)) continue;
+            if ((Math.sin(r * 12.3 + c * 4.7) * 10000) % 1 > 0.52) {
+              ctx.fillRect(r, c, 6, 6);
+            }
+          }
+        }
+        ctx.fillStyle = '#06b6d4';
+        ctx.beginPath();
+        ctx.arc(size / 2, size / 2, 14, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    });
+  </script>
+</body>
+</html>

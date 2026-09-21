@@ -1,0 +1,8 @@
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Temp
+.tmp/
+scratch/

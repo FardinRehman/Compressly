@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Compressly for Android</title>
+  <meta name="description" content="Official Privacy Policy for Compressly Android App. 100% offline, zero data collection, zero cloud transmission.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo.png" alt="Compressly Logo" class="brand-icon">
+        <span>Compressly</span>
+        <span class="brand-badge">Privacy</span>
+      </a>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+          <i data-lucide="moon" id="themeIcon"></i>
+        </button>
+        <a href="index.html" class="btn btn-secondary btn-sm">
+          <i data-lucide="arrow-left"></i>
+          <span>Back to Home</span>
+        </a>
+        <a href="base.apk" download="Compressly_v1.0.apk" class="btn btn-apk btn-sm btn-direct-apk">
+          <i data-lucide="download"></i>
+          <span>Download APK</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 140px; padding-bottom: 90px;">
+    <div class="container" style="max-width: 860px;">
+      <div style="background: var(--bg-card); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 48px; backdrop-filter: blur(18px); box-shadow: var(--shadow-md);">
+        
+        <div class="badge-pill" style="margin-bottom: 16px;">
+          <i data-lucide="shield-check" style="width: 16px;"></i>
+          <span>Official Legal Document</span>
+        </div>
+
+        <h1 style="font-size: 2.5rem; font-weight: 800; color: var(--text-highlight); margin-bottom: 8px;">
+          Compressly Privacy Policy
+        </h1>
+        <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 32px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px;">
+          Last Updated & Effective: January 1, 2026 | App: Compressly (Android)
+        </div>
+
+        <div style="color: var(--text-secondary); line-height: 1.8; font-size: 1rem; display: flex; flex-direction: column; gap: 24px;">
+          <section>
+            <h2 style="color: var(--text-highlight); font-size: 1.35rem; font-weight: 700; margin-bottom: 10px;">
+              1. Executive Summary & Privacy Philosophy
+            </h2>
+            <p>
+              Compressly is built upon strict <strong>Privacy-by-Design</strong> principles. The application operates as a standalone, on-device utility designed to compress and optimize photos and images. Compressly <strong>does not upload, transmit, store, or sell</strong> any of your media files or personal information to third parties, remote servers, or cloud infrastructure.
+            </p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-highlight); font-size: 1.35rem; font-weight: 700; margin-bottom: 10px;">
+              2. Data We Do NOT Collect
+            </h2>
+            <p>We believe the best way to secure user data is to never collect it. As such:</p>
+            <ul style="padding-left: 24px; margin-top: 8px;">
+              <li><strong>No Photo Uploads:</strong> Photos and graphics never leave your physical smartphone.</li>
+              <li><strong>No Personal Identifiers:</strong> We do not ask for or collect names, email addresses, phone numbers, or account credentials.</li>
+              <li><strong>No Location Data:</strong> Compressly never accesses your device's GPS or network location.</li>
+              <li><strong>No Advertising Trackers:</strong> There are no third-party ad networks, fingerprinting SDKs, or behavioral trackers embedded in the app.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-highlight); font-size: 1.35rem; font-weight: 700; margin-bottom: 10px;">
+              3. Android Device Permissions
+            </h2>
+            <p>To perform its core functions, Compressly requests minimal, scoped Android operating system permissions:</p>
+            <ul style="padding-left: 24px; margin-top: 8px;">
+              <li><strong>READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE:</strong> Needed strictly so you can browse and select the photos you want to optimize.</li>
+              <li><strong>WRITE_EXTERNAL_STORAGE / Scoped Storage:</strong> Needed to save the newly compressed photos to your phone's gallery or specified export folder.</li>
+              <li><strong>FOREGROUND_SERVICE:</strong> Used during long-running batch photo compressions to prevent the Android operating system from interrupting processing when the screen is locked.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-highlight); font-size: 1.35rem; font-weight: 700; margin-bottom: 10px;">
+              4. EXIF & Geolocation Metadata Sanitation
+            </h2>
+            <p>
+              Photos captured by modern smartphones often contain sensitive EXIF metadata, including exact GPS coordinates and device hardware numbers. Compressly provides built-in metadata sanitization toggles, enabling users to strip all sensitive geographical tags before sharing compressed photos online.
+            </p>
+          </section>
+
+          <section>
+            <h2 style="color: var(--text-highlight); font-size: 1.35rem; font-weight: 700; margin-bottom: 10px;">
+              5. Contact Us
+            </h2>
+            <p>
+              For inquiries regarding this privacy policy, please contact our team at:
+            </p>
+            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 14px 20px; border-radius: var(--radius-md); font-family: var(--font-mono); color: var(--primary); margin-top: 8px;">
+              privacy@compressly.app
+            </div>
+          </section>
+        </div>
+
+        <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <a href="index.html" class="btn btn-secondary btn-sm">
+            <i data-lucide="arrow-left"></i> Back to Homepage
+          </a>
+          <a href="terms.html" class="btn btn-secondary btn-sm">
+            <span>Read Terms of Service</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="padding: 30px 0;">
+    <div class="container" style="text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+      © 2026 Compressly. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
